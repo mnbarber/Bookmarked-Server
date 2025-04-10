@@ -9,6 +9,13 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    bookshelf: [
+        {
+            title: String,
+            author_name: [String],
+            coverId: Number,
+        }
+    ]
 });
 
 userSchema.set('toJSON', {
